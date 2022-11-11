@@ -1,0 +1,67 @@
+@import "../../../scss/variables.scss";
+
+.map-item {
+  position: absolute;
+  color: #fff;
+  text-align: center;
+}
+
+.map-item__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map-item_dark {
+  color: $grey-400;
+}
+
+.map-item__circle {
+  background: $red;
+  border-radius: 100%;
+  margin-bottom: 0.5rem;
+  border: 1px solid #cdcdcd;
+}
+
+.map-item__top_sm {
+  .map-item__circle {
+    width: 20px;
+    height: 20px;
+  }
+  .map-item__amount {
+    margin: -30px 0 0;
+    font-size: 20px;
+  }
+}
+
+.map-item__top_md {
+  .map-item__circle {
+    width: 45px;
+    height: 45px;
+  }
+  .map-item__amount {
+    margin: -42px 0 9px;
+    font-size: 22px;
+  }
+}
+
+.map-item__top_lg {
+  .map-item__circle {
+    width: 70px;
+    height: 70px;
+  }
+  .map-item__amount {
+    margin: -56px 0 20px;
+    font-size: 26px;
+  }
+}
+
+.map-item__region-name {
+  margin: 0;
+  font-size: 14px;
+  max-width: 100px;
+}
+
+.map-item__amount {
+  font-weight: 500;
+}

@@ -1,0 +1,55 @@
+@import "../../scss/variables.scss";
+
+.timeline {
+  width: 100%;
+  position: relative;
+}
+
+.timeline-vertical {
+  position: absolute;
+  width: 10px;
+  background: #e7e7e9;
+  height: 111%;
+  top: -54px;
+  z-index: -1;
+  right: 133px;
+  &:before {
+    top: -4px;
+    left: -8px;
+    position: absolute;
+    content: "";
+    width: 1.6rem;
+    height: 1.6rem;
+    background: #e7e7e9;
+    border-radius: 100%;
+  }
+  &:after {
+    bottom: -13px;
+    left: -9px;
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 23px 14px 0 14px;
+    border-color: #e7e7e9 transparent transparent transparent;
+  }
+}
+
+.timeline-vertical__year {
+  position: relative;
+  bottom: 57px;
+  left: -19px;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.timeline-vertical__allocation {
+  position: relative;
+  color: #f9d55d;
+  text-transform: uppercase;
+  bottom: 69px;
+  left: 35px;
+  font-size: 18px;
+  font-weight: 500;
+}

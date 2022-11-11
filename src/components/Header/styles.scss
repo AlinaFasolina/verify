@@ -1,0 +1,22 @@
+@import "../../scss/variables.scss";
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+  background: white;
+  border-bottom: 1px solid $grey-100;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.header-right {
+  display: flex;
+}

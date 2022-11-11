@@ -1,0 +1,38 @@
+@import "../../../../scss/variables.scss";
+
+.targetedBeneficiaries-chart__total-number {
+  position: absolute;
+  left: 184px;
+  top: 202px;
+  text-align: center;
+}
+
+.targetedBeneficiaries-chart__wrapper {
+  position: relative;
+  left: -66px;
+  bottom: 98px;
+}
+
+.targetedBeneficiaries__girls-label {
+  position: absolute;
+  left: 283px;
+  top: 190px;
+}
+
+.targetedBeneficiaries__boys-label {
+  position: absolute;
+  left: 260px;
+  top: 151px;
+}
+
+.targetedBeneficiaries__women-label {
+  position: absolute;
+  left: 133px;
+  top: 200px;
+}
+
+.targetedBeneficiaries__men-label {
+  position: absolute;
+  left: 268px;
+  top: 272px;
+}

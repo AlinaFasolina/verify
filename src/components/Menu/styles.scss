@@ -1,0 +1,15 @@
+@import "../../scss/variables.scss";
+
+.menu {
+  display: flex;
+  a {
+    text-transform: uppercase;
+    color: $black-main;
+    text-decoration: none;
+    padding: 1rem;
+    transition: all 0.4s ease;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import "../../scss/variables.scss";
+
+.targetedBeneficiaries {
+  display: flex;
+  flex-direction: column;
+}
+
+.targetedBeneficiaries-content {
+  background: $blue-100;
+  padding: 1rem 2rem;
+  display: flex;
+  width: 500px;
+}
+
+.targetedBeneficiaries-title {
+  text-transform: uppercase;
+  color: $blue-200;
+  font-size: 24px;
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
+
+.targetedBeneficiaries-donut {
+  svg {
+    width: 220px;
+    overflow: visible;
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../../../scss/variables.scss";
+
+.education__wrapper {
+  position: relative;
+}
+
+.education__boys-label {
+  position: absolute;
+  left: 38px;
+  top: 169px;
+}
+
+.education__girls-label {
+  position: absolute;
+  left: 196px;
+  top: 105px;
+}
+
+.education__men-label {
+  position: absolute;
+  left: 228px;
+  top: 218px;
+}
+
+.education__women-label {
+  position: absolute;
+  left: 119px;
+  top: 280px;
+}
+
+.education__total-number {
+  position: absolute;
+  left: 116px;
+  top: 175px;
+  text-align: center;
+}
+
+.education-total__top {
+  font-size: 28px;
+  margin: 0 0 0.2rem;
+}
+
+.education-total__bottom {
+  margin: 0;
+  text-transform: uppercase;
+  color: $grey-200;
+}

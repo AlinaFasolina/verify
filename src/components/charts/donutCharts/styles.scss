@@ -1,0 +1,35 @@
+@import "../../../scss/variables.scss";
+
+.donut-label__top {
+  margin: 0;
+  font-size: 18px;
+}
+
+.donut-label__bottom {
+  margin: 0;
+  font-size: 15px;
+  color: $grey-200;
+}
+
+.donut-total__top {
+  font-size: 28px;
+  margin: 0 0 0.2rem;
+}
+
+.donut-total__bottom {
+  margin: 0;
+  text-transform: uppercase;
+  color: $grey-200;
+}
+
+.donut-percent-label__white {
+  color: white;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.donut-percent-label__grey {
+  color: $grey-200;
+  font-style: italic;
+  font-size: 14px;
+}

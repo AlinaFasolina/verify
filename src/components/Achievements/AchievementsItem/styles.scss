@@ -1,0 +1,25 @@
+@import "../../../scss/variables.scss";
+
+.achievementsItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  p {
+    margin: 0;
+  }
+}
+
+.achievementsItem__img {
+  margin-right: 1rem;
+  width: 50px;
+}
+
+.achievementsItem__amount {
+  font-size: 24px;
+  margin-right: 0.5rem;
+}
+
+.achievementsItem__text {
+  font-size: 14px;
+  color: $grey-500;
+}

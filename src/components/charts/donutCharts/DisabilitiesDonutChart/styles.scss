@@ -1,0 +1,47 @@
+@import "../../../../scss/variables.scss";
+
+.disabilities__wrapper {
+  position: relative;
+}
+
+.disabilities__boys-label {
+  position: absolute;
+  left: 229px;
+  top: 158px;
+}
+
+.disabilities__girls-label {
+  position: absolute;
+  left: 194px;
+  top: 99px;
+}
+
+.disabilities__men-label {
+  position: absolute;
+  left: 74px;
+  top: 108px;
+}
+
+.disabilities__women-label {
+  position: absolute;
+  left: 82px;
+  top: 266px;
+}
+
+.disabilities__total-number {
+  position: absolute;
+  left: 114px;
+  top: 172px;
+  text-align: center;
+}
+
+.disabilities-total__top {
+  font-size: 28px;
+  margin: 0 0 0.2rem;
+}
+
+.disabilities-total__bottom {
+  margin: 0;
+  text-transform: uppercase;
+  color: $grey-200;
+}

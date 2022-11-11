@@ -1,0 +1,12 @@
+.socials-wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.socials-link {
+  transition: 0.4s ease;
+  &:hover {
+    opacity: 0.7;
+  }
+}

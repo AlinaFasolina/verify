@@ -1,0 +1,21 @@
+@import "../../scss/variables.scss";
+
+.allocatedByPartnerType {
+  width: 380px;
+  margin-right: 2rem;
+}
+
+.allocationsByPartnerType-donut {
+  margin-top: -73px;
+  svg {
+    width: 200px;
+    overflow: visible;
+  }
+}
+
+.allocatedByPartnerType-title {
+  text-transform: uppercase;
+  color: $blue-200;
+  font-size: 24px;
+  margin: 0 0 2rem;
+}

@@ -1,0 +1,122 @@
+@import "../../scss/variables.scss";
+
+.homepage-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 2rem;
+}
+
+.homepage-wrapper {
+  display: flex;
+}
+
+.homepage-main-title {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.homepage-descrip {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.homepage-support-list {
+  font-size: 18px;
+}
+
+.homepage-aid-title {
+  font-weight: 300;
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+}
+
+.homepage-aid-totals {
+  text-align: center;
+  color: $grey-200;
+  margin: 0 0 2rem;
+  font-size: 11px;
+}
+
+.homepage-donations {
+  margin-bottom: 5rem;
+}
+
+.homepage-aid-updated {
+  position: relative;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 2rem;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 100%;
+    height: 1px;
+    background: $grey-100;
+    z-index: -1;
+  }
+  span {
+    background: white;
+    padding: 0 2rem;
+    z-index: 2;
+  }
+}
+
+.homepage-aid-stats {
+  display: flex;
+}
+
+.homepage-aid-stats__left {
+  border-right: 1px solid $grey-100;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  width: 50%;
+}
+
+.homepage-aid-stats__right {
+  border-left: 1px solid $grey-100;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  width: 50%;
+}
+
+.homepage-aid-amount {
+  font-size: 40px;
+  border-bottom: 1px solid $grey-100;
+  margin: 0;
+}
+
+.homepage-aid-inner {
+  display: flex;
+  div {
+    &:first-child {
+      margin-right: 2rem;
+    }
+  }
+}
+
+.homepage-aid-label {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.homepage-aid-item {
+  margin-bottom: 2rem;
+}
+
+.homepage-right {
+  padding-left: 2rem;
+  width: 50%;
+}
+
+.homepage-slider {
+  margin-bottom: 1rem;
+}

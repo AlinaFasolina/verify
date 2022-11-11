@@ -1,0 +1,66 @@
+@import "../../../../scss/variables.scss";
+
+.allocationsPartnerTypeChart__wrapper {
+  position: relative;
+}
+
+.allocationsPartnerTypeChart__total-number {
+  position: absolute;
+  left: 166px;
+  top: 198px;
+  text-align: center;
+}
+
+.allocationsPartnerType-label {
+  p {
+    margin: 0;
+    &:first-child {
+      font-size: 26px;
+    }
+    span {
+      display: block;
+      font-size: 14px;
+      width: 84px;
+      color: $grey-200;
+    }
+  }
+}
+
+.allocationsPartnerType__un-label {
+  position: absolute;
+  left: 38px;
+  top: 108px;
+}
+
+.allocationsPartnerType__un-percent {
+  position: absolute;
+  left: 247px;
+  top: 163px;
+  p {
+    color: $grey-200;
+  }
+}
+
+.allocationsPartnerType__nngo-label {
+  position: absolute;
+  left: 295px;
+  top: 113px;
+}
+
+.allocationsPartnerType__nngo-percent {
+  position: absolute;
+  left: 146px;
+  top: 151px;
+}
+
+.allocationsPartnerType__ingo-label {
+  position: absolute;
+  left: 171px;
+  top: 329px;
+}
+
+.allocationsPartnerType__ingo-percent {
+  position: absolute;
+  left: 183px;
+  top: 277px;
+}

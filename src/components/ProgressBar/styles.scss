@@ -1,0 +1,25 @@
+@import "../../scss/variables.scss";
+
+.progressBar-line {
+  height: 20px;
+  background: $blue-200;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+}
+
+.progressBar__item {
+  display: flex;
+  margin-bottom: 0.6rem;
+  align-items: center;
+}
+
+.progressBar__country {
+  margin-right: 1rem;
+  width: 90px;
+  text-align: right;
+}
+
+.progressBar__flag {
+  width: 30px;
+  margin-right: 1rem;
+}
