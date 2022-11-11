@@ -1,38 +1,19 @@
 import React from "react";
 import Layout from "../../components/Layout";
-import ProgressBar from "../../components/ProgressBar";
 import "./styles.scss";
-import { donorsCountriesList } from "../../consts/consts";
 import DisabilitiesDonutChart from "../../components/charts/donutCharts/DisabilitiesDonutChart";
 import WomanDonutChart from "../../components/charts/donutCharts/WomanDonutChart";
-import flag from "../../img/ua-flag.png";
+import flag from "../../img/slider-images/ua-flag.png";
 import EducationDonutChart from "../../components/charts/donutCharts/EducationDonutChart";
 import Timeline from "../../components/Timeline";
+import DonorCountries from "../../components/DonorCountries";
 
 const DonorContributions = () => {
   return (
     <Layout>
       <div className="donorContrib">
         <div className="donorContrib-left donorContrib-block">
-          <h2 className="donorContrib-title">2022 DONOR CONTRIBUTIONS</h2>
-          <div className="donorContrib-amount-wrapper">
-            <div>icon</div>
-            <div>
-              <p>
-                <span className="donorContrib-dollar">$</span>
-                <span className="donorContrib-amount">207.9M</span>
-              </p>
-              <p className="donorContrib-contributions">contributions</p>
-            </div>
-          </div>
-          {donorsCountriesList.map((item) => (
-            <ProgressBar
-              key={item.id}
-              title={item.title}
-              img={item.img}
-              count={item.count}
-            />
-          ))}
+          <DonorCountries />
         </div>
 
         <div className="donorContrib-center donorContrib-block">

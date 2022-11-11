@@ -5,10 +5,17 @@
 
 .allocations-bottom {
   display: flex;
+  justify-content: space-between;
 }
 
 .allocations-map {
   display: flex;
   justify-content: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  margin-top: -2rem;
+}
+
+.allocations-history {
+  margin-top: -15rem;
+  width: calc(30% - 5rem);
 }

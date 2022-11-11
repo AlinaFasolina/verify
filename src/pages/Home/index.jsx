@@ -3,6 +3,12 @@ import Layout from "../../components/Layout";
 import News from "../../components/News";
 import SliderComponent from "../../components/SliderComponent";
 import "./styles.scss";
+import aidLogo from "../../img/aid-logo.png";
+import dollarCoin from "../../img/icons/dollar-coin.svg";
+import pill from "../../img/icons/pill.svg";
+import cube from "../../img/icons/cube.svg";
+import weight from "../../img/icons/weight.svg";
+import medicalCross from "../../img/icons/medical-cross.svg";
 
 const Home = () => {
   return (
@@ -36,7 +42,7 @@ const Home = () => {
             </div>
             <div className="homepage-aid">
               <h2 className="homepage-aid-title">
-                <span> AID TRACKER</span>
+                <img src={aidLogo} /> <span>AID TRACKER</span>
               </h2>
               <p className="homepage-aid-totals">
                 Unaudired totals since Jan.1, 2022
@@ -48,29 +54,43 @@ const Home = () => {
                 <div className="homepage-aid-stats__left">
                   <div className="homepage-aid-item">
                     <p className="homepage-aid-amount">$1,463,822,168</p>
-                    <p className="homepage-aid-label">in medical aid</p>
+                    <p className="homepage-aid-label">
+                      <span> in medical aid</span>
+                      <img className="homepage-aid__icon" src={dollarCoin} />
+                    </p>
                   </div>
                   <div className="homepage-aid-item">
                     <p className="homepage-aid-amount">10,370,307</p>
                     <p className="homepage-aid-label">
-                      pounds of medicine and supplies
+                      <span> pounds of medicine and supplies</span>
+                      <img className="homepage-aid__icon" src={weight} />
                     </p>
                   </div>
                 </div>
                 <div className="homepage-aid-stats__right">
                   <div className="homepage-aid-item">
                     <p className="homepage-aid-amount">479,492,254</p>
-                    <p className="homepage-aid-label">doses of medicine</p>
+                    <p className="homepage-aid-label">
+                      <span>doses of medicine</span>
+                      <img className="homepage-aid__icon" src={pill} />
+                    </p>
                   </div>
                   <div className="homepage-aid-inner homepage-aid-item">
                     <div>
                       <p className="homepage-aid-amount">16,260</p>
-                      <p className="homepage-aid-label">deliveries</p>
+                      <p className="homepage-aid-label">
+                        <span>deliveries</span>
+                        <img className="homepage-aid__icon" src={cube} />
+                      </p>
                     </div>
                     <div>
                       <p className="homepage-aid-amount">2,160</p>
                       <p className="homepage-aid-label">
-                        healthcare providers supported
+                        <span> healthcare providers supported</span>
+                        <img
+                          className="homepage-aid__icon homepage-aid__icon-cross"
+                          src={medicalCross}
+                        />
                       </p>
                     </div>
                   </div>

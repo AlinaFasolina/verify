@@ -1,12 +1,42 @@
-import img1 from "../img/slider-images/img1.jpg";
-import img3 from "../img/slider-images/img3.jpg";
-import img4 from "../img/slider-images/img4.jpg";
+import img1 from "../img/slider-images/ua-flag.png";
+import img2 from "../img/slider-images/image2_sml.png";
+import img3 from "../img/slider-images/image3_sml.png";
 import foodIcon from "../img/icons/food.svg";
 import fileIcon from "../img/icons/file.svg";
+import money from "../img/icons/money.svg";
+import explosion from "../img/icons/explosion.svg";
+import file from "../img/icons/file.svg";
 import medicalIcon from "../img/icons/medical.svg";
 import communitySupportIcon from "../img/icons/community-support.svg";
 import peopleSupportIcon from "../img/icons/people-support.svg";
 import waterSupplyIcon from "../img/icons/water-supply.svg";
+import unitedkingdom from "../img/flags/unitedkingdom.svg";
+import canada from "../img/flags/canada.svg";
+import netherlands from "../img/flags/netherlands.svg";
+import unitedstates from "../img/flags/unitedstates.svg";
+import austallia from "../img/flags/austallia.svg";
+import belgium from "../img/flags/belgium.svg";
+import sweden from "../img/flags/sweden.svg";
+import italy from "../img/flags/italy.svg";
+import norway from "../img/flags/norway.svg";
+import spain from "../img/flags/spain.svg";
+import denmark from "../img/flags/denmark.svg";
+import japan from "../img/flags/japan.svg";
+import ireland from "../img/flags/ireland.svg";
+import france from "../img/flags/france.svg";
+import switzerland from "../img/flags/switzerland.svg";
+import iceland from "../img/flags/iceland.svg";
+import lithuania from "../img/flags/lithuania.svg";
+import slovenia from "../img/flags/slovenia.svg";
+import germany from "../img/flags/germany.svg";
+import korea from "../img/flags/korea.svg";
+import luxembourg from "../img/flags/luxembourg.svg";
+import estonia from "../img/flags/estonia.svg";
+import jersey from "../img/flags/jersey.svg";
+import cyprus from "../img/flags/cyprus.svg";
+import philippines from "../img/flags/philippines.svg";
+import newzealand from "../img/flags/newzealand.svg";
+import privatedonations from "../img/flags/privatedonations.svg";
 
 export const newsList = [
   {
@@ -17,39 +47,48 @@ export const newsList = [
   {
     id: 2,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies",
-    img: img3,
+    img: img2,
   },
   {
     id: 3,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies",
-    img: img4,
+    img: img3,
   },
 ];
 
 export const donorsCountriesList = [
-  { id: 1, title: "United Kingdom", img: "", count: 43.1 },
-  { id: 2, title: "Canada", img: "", count: 31.3 },
-  { id: 3, title: "Netherlands", img: "", count: 22.3 },
-  { id: 4, title: "United States", img: "", count: 20 },
-  { id: 5, title: "Germany", img: "", count: 18.5 },
-  { id: 6, title: "Australia", img: "", count: 11.1 },
-  { id: 7, title: "Belgium", img: "", count: 9.9 },
-  { id: 8, title: "Private donations (through UHF)", img: "", count: 8 },
-  { id: 9, title: "Sweden", img: "", count: 7.1 },
-  { id: 10, title: "Italy", img: "", count: 6.6 },
-  { id: 11, title: "Norway", img: "", count: 6.1 },
-  { id: 12, title: "Spain", img: "", count: 5.3 },
-  { id: 13, title: "Denmark", img: "", count: 4.5 },
-  { id: 14, title: "Japan", img: "", count: 4.5 },
-  { id: 15, title: "Ireland", img: "", count: 3.3 },
-  { id: 16, title: "France", img: "", count: 2.1 },
-  { id: 17, title: "New Zealand", img: "", count: 1.4 },
-  { id: 18, title: "Switzerland", img: "", count: 0.5 },
-  { id: 19, title: "Korea", img: "", count: 0.5 },
-  { id: 20, title: "Iceland", img: "", count: 0.4 },
-  { id: 21, title: "Luxembourg", img: "", count: 0.4 },
-  { id: 22, title: "Lithuania", img: "", count: 0.3 },
-  { id: 23, title: "Slovenia", img: "", count: 0.2 },
+  { id: 1, title: "United Kingdom", img: unitedkingdom, count: 43.1 },
+  { id: 2, title: "Canada", img: canada, count: 31.3 },
+  { id: 3, title: "Netherlands", img: netherlands, count: 22.3 },
+  { id: 4, title: "United States", img: unitedstates, count: 20 },
+  { id: 5, title: "Germany", img: germany, count: 18.5 },
+  { id: 6, title: "Australia", img: austallia, count: 11.1 },
+  { id: 7, title: "Belgium", img: belgium, count: 9.9 },
+  {
+    id: 8,
+    title: "Private donations (through UHF)",
+    img: privatedonations,
+    count: 8,
+  },
+  { id: 9, title: "Sweden", img: sweden, count: 7.1 },
+  { id: 10, title: "Italy", img: italy, count: 6.6 },
+  { id: 11, title: "Norway", img: norway, count: 6.1 },
+  { id: 12, title: "Spain", img: spain, count: 5.3 },
+  { id: 13, title: "Denmark", img: denmark, count: 4.5 },
+  { id: 14, title: "Japan", img: japan, count: 4.5 },
+  { id: 15, title: "Ireland", img: ireland, count: 3.3 },
+  { id: 16, title: "France", img: france, count: 2.1 },
+  { id: 17, title: "New Zealand", img: newzealand, count: 1.4 },
+  { id: 18, title: "Switzerland", img: switzerland, count: 0.5 },
+  { id: 19, title: "Korea", img: korea, count: 0.5 },
+  { id: 20, title: "Iceland", img: iceland, count: 0.4 },
+  { id: 21, title: "Luxembourg", img: luxembourg, count: 0.4 },
+  { id: 22, title: "Lithuania", img: lithuania, count: 0.3 },
+  { id: 23, title: "Slovenia", img: slovenia, count: 0.2 },
+  { id: 24, title: "Estonia", img: estonia, count: 0.2 },
+  { id: 25, title: "Jersey", img: jersey, count: 0.2 },
+  { id: 26, title: "Cyprus", img: cyprus, count: 0.1 },
+  { id: 27, title: "Philippines", img: philippines, count: 0.1 },
 ];
 
 export const clusterAllocationsList = [
@@ -70,14 +109,18 @@ export const clusterAllocationsList = [
 export const timelineList = [
   {
     id: 1,
-    descrip: "First reserve allocation for $3m launched on 30 December 2021",
+    descrip:
+      "First 2022 reserve allocation for $3m launched on 30 December 2021",
     month: "Jan",
     amount: 3,
+    icon: money,
+    classname: "timeline-icon__money-icon",
   },
   {
     id: 2,
     descrip: "Russia invades Ukraine on 24 February",
     month: "Feb",
+    icon: explosion,
   },
   {
     id: 3,
@@ -85,6 +128,8 @@ export const timelineList = [
       "Emergency Relief Coordinator (ERC) allocates $20m from CERF on 24 February",
     month: "Feb",
     amount: 20,
+    icon: money,
+    classname: "timeline-icon__money-icon",
   },
   {
     id: 4,
@@ -92,25 +137,32 @@ export const timelineList = [
       "UHF launches 2nd Reserve Allocation for $18m on 27 February, later increased to $41m",
     month: "Feb",
     amount: 41,
+    icon: money,
+    classname: "timeline-icon__money-icon",
   },
   {
     id: 5,
     descrip:
       "Ukraine flash appeal of $1.1b is issued to support 6m people targeted for assistance on 1 March",
     month: "Mar",
+    icon: file,
   },
   {
     id: 6,
     descrip:
-      "Emergency Relief Coordinator (ERC) allocated $40m from CEFR on 14 March",
+      "Emergency Relief Coordinator (ERC) allocated $40m from CERF on 14 March",
     month: "Mar",
     amount: 40,
+    icon: money,
+    classname: "timeline-icon__money-icon",
   },
   {
     id: 7,
     descrip: "UHF launches 3rd Reserve Allocation for $50m on 19 April",
     month: "Apr",
     amount: 50,
+    icon: money,
+    classname: "timeline-icon__money-icon",
   },
 ];
 

@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.scss";
 import IconInfo from "../IconInfo";
 import location from "../../img/icons/location.svg";
-import peopleTarget from "../../img/icons/peopleTarget.svg";
+import peopleTarget from "../../img/icons/people-target.svg";
 
 const AllocatedByLocation = () => {
   return (
