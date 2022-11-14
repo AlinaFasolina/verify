@@ -1,8 +1,7 @@
 @import "../../scss/variables.scss";
 
 .allocatedByPartnerType {
-  width: 380px;
-  margin-right: 2rem;
+  width: calc(35% - 5rem);
 }
 
 .allocationsByPartnerType-donut {

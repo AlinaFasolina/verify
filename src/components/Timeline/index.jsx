@@ -8,9 +8,12 @@ const Timeline = () => {
     <div className="timeline">
       {timelineList.map((item) => (
         <TimelineItem
+          icon={item.icon}
+          key={item.id}
           descrip={item.descrip}
           month={item.month}
           amount={item.amount}
+          classname={item.classname}
         />
       ))}
       <div className="timeline-vertical">

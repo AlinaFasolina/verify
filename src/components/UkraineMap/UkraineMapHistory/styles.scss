@@ -1,21 +1,113 @@
+@import "../../../scss/variables.scss";
+
+.history-wrapper {
+  background: $blue-100;
+  padding: 1rem 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.history-title {
+  margin: 0;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.history-targeted {
+  display: flex;
+  justify-content: space-between;
+}
+
 .history-targeted__label {
-    width: 30px;
-    height: 20px;
-    margin-right: 1rem;
+  width: 30px;
+  height: 20px;
+  margin-right: 1rem;
 }
 
 .history-targeted__label_sm {
-    background: #ebf0f4;
+  background: #ebf0f4;
+  border: 1px solid #d1d1d1;
 }
 
 .history-targeted__label_lg {
-    background:#87b3df;
+  background: #87b3df;
 }
 
 .history-targeted__label_md {
-    background: #d7e7f7;
+  background: #d7e7f7;
 }
 
 .history-targeted__label_xl {
-    background:  #1e66b5;
+  background: #1e66b5;
+}
+
+.history-targeted__item {
+  display: flex;
+  align-items: center;
+  &:nth-child(1) {
+    margin-bottom: 1rem;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+.history-circles {
+  background: $red;
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  position: relative;
+  border: 2px solid #fff;
+  &:before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    bottom: -1px;
+    left: 8px;
+  }
+  &:after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    bottom: 0px;
+    left: 18px;
+  }
+}
+
+.history-circles__labels {
+  margin-top: -9px;
+  margin-left: 24px;
+}
+
+.history-circles__label-item {
+  position: relative;
+  margin: 0;
+  &::after {
+    position: absolute;
+    content: "";
+    left: -62px;
+    bottom: 7px;
+    width: 52px;
+    height: 1px;
+    border-bottom: 1px dashed $grey-200;
+  }
+  &:nth-child(2) {
+    margin-bottom: 1px;
+  }
+}
+
+.history-circles__wrapper {
+  display: flex;
+}
+
+.history-top {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px dashed $grey-600;
 }
