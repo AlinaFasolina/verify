@@ -19,8 +19,8 @@ const DisabilitiesDonutChart = () => {
           cx={250}
           cy={250}
           labelLine={false}
-          outerRadius={110}
-          innerRadius={90}
+          outerRadius={100}
+          innerRadius={60}
           dataKey="value"
           isAnimationActive={false}
         >

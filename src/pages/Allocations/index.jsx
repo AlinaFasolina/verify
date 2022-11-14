@@ -28,7 +28,7 @@ const Allocations = () => {
         <div className="allocations-history">
           <UkraineMapHistory />
           <div className="allocations-donor-contrib">
-            <DonorCountries size="sm" hasHistory />
+            <DonorCountries size="sm" />
           </div>
         </div>
       </div>

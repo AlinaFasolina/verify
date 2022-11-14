@@ -5,12 +5,25 @@ footer {
 }
 
 .footer-container {
-  max-width: 1400px;
+  max-width: 1700px;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100px;
+}
+
+.footer-copyright {
+  width: 33%;
+  margin-left: 33%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-socials {
+  width: 33%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media (max-width: 576px) {

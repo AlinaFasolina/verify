@@ -20,8 +20,8 @@ const EducationDonutChart = () => {
           cx={250}
           cy={250}
           labelLine={false}
-          outerRadius={110}
-          innerRadius={90}
+          outerRadius={100}
+          innerRadius={60}
           dataKey="value"
           isAnimationActive={false}
         >
@@ -32,8 +32,8 @@ const EducationDonutChart = () => {
       </PieChart>
       <div>
         <div className="education__total-number donut-label">
-          <p className="education-total__top">22K</p>
-          <p className="education-total__bottom">targeted</p>
+          <p className="donut-total__top">22K</p>
+          <p className="donut-total__bottom">targeted</p>
         </div>
         <div className="education__boys-label donut-label">
           <p className="donut-label__top">6.5K</p>
