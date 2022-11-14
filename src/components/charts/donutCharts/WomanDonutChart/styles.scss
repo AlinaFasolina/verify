@@ -2,23 +2,24 @@
 
 .woman-chart__wrapper {
   position: relative;
+  left: -2px;
 }
 
 .woman-chart__girls-label {
   position: absolute;
-  left: 188px;
-  top: 97px;
+  left: 163px;
+  top: 102px;
 }
 
 .woman-chart__women-label {
   position: absolute;
-  left: 38px;
-  bottom: -27px;
+  left: 125px;
+  bottom: -57px;
 }
 
 .woman-chart__total-number {
   position: absolute;
-  left: 115px;
-  top: 175px;
+  left: 124px;
+  top: 179px;
   text-align: center;
 }

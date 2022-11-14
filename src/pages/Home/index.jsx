@@ -42,10 +42,10 @@ const Home = () => {
             </div>
             <div className="homepage-aid">
               <h2 className="homepage-aid-title">
-                <img src={aidLogo} /> <span>AID TRACKER</span>
+                <img src={aidLogo} /> <span>PRIORITY SUPPORT CLUSTERS</span>
               </h2>
               <p className="homepage-aid-totals">
-                Unaudired totals since Jan.1, 2022
+                Unaudited totals since Jan. 1, 2022
               </p>
               <p className="homepage-aid-updated">
                 <span> updated 5 am today</span>

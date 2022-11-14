@@ -4,6 +4,7 @@ import "./styles.scss";
 import DisabilitiesDonutChart from "../../components/charts/donutCharts/DisabilitiesDonutChart";
 import WomanDonutChart from "../../components/charts/donutCharts/WomanDonutChart";
 import flag from "../../img/slider-images/ua-flag.png";
+import refugees from "../../img/slider-images/refugees.png";
 import EducationDonutChart from "../../components/charts/donutCharts/EducationDonutChart";
 import Timeline from "../../components/Timeline";
 import DonorCountries from "../../components/DonorCountries";
@@ -22,6 +23,7 @@ const DonorContributions = () => {
           <div className="donorContrib-sections-names">
             <p>Women and Girls</p>
             <p>People with Disabilities</p>
+            <p>Education in Protracted Crisis</p>
           </div>
 
           <div className="donorContrib-donuts">
@@ -32,16 +34,12 @@ const DonorContributions = () => {
               <div className="donut-disabilities">
                 <DisabilitiesDonutChart />
               </div>
-            </div>
-            <div className="donorContrib-donuts__bottom">
-              <p className="donut-education__title">
-                Education in Protracted Crisis
-              </p>
               <div className="donut-education">
                 <EducationDonutChart />
               </div>
             </div>
           </div>
+          <img className="donorContrib-center__bottom-img" src={refugees} />
         </div>
 
         <div className="donorContrib-right donorContrib-block">

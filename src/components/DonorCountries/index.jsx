@@ -5,7 +5,7 @@ import { donorsCountriesList } from "../../consts/consts";
 import money from "../../img/icons/money.svg";
 import DonorCounriesHistory from "./DonorCounriesHistory";
 
-const DonorCountries = ({ size, hasHistory }) => {
+const DonorCountries = ({ size }) => {
   return (
     <div
       className={`donorContrib-counties ${
@@ -31,7 +31,7 @@ const DonorCountries = ({ size, hasHistory }) => {
           count={item.count}
         />
       ))}
-      {hasHistory && <DonorCounriesHistory />}
+      <DonorCounriesHistory />
     </div>
   );
 };

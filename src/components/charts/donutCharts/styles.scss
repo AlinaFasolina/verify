@@ -12,14 +12,15 @@
 }
 
 .donut-total__top {
-  font-size: 28px;
-  margin: 0 0 0.2rem;
+  font-size: 26px;
+  margin: 0;
 }
 
 .donut-total__bottom {
   margin: 0;
   text-transform: uppercase;
   color: $grey-200;
+  font-size: 12px;
 }
 
 .donut-percent-label__white {
