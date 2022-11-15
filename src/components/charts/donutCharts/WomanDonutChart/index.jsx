@@ -17,7 +17,7 @@ const WomanDonutChart = () => {
           cx={250}
           cy={250}
           labelLine={false}
-          outerRadius={100}
+          outerRadius={110}
           innerRadius={60}
           dataKey="value"
           isAnimationActive={false}

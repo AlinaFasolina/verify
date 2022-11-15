@@ -12,7 +12,7 @@ const TargetedBeneficiariesTable = () => {
           <p>Girls</p>
         </div>
         <div className="targetedBeneficiaries-table__icon">
-          <Women color="#c7d5ef" width="50px" />
+          <Women color="#c7d5ef" width="45px" />
         </div>
       </div>
 
@@ -22,7 +22,7 @@ const TargetedBeneficiariesTable = () => {
           <p>Boys</p>
         </div>
         <div className="targetedBeneficiaries-table__icon">
-          <Men color="#c7c8ca" width="50px" />
+          <Men color="#c7c8ca" width="45px" />
         </div>
       </div>
 

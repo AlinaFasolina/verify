@@ -17,13 +17,15 @@ const Allocations = () => {
       <div className="allocations-top">
         <TargetedBeneficiaries />
         <AllocatedByLocation />
-        <ClusterAllocations />
+        <div className="allocations-map">
+          <UkraineMap {...regionsColors} />
+        </div>
       </div>
-      <div className="allocations-map">
-        <UkraineMap {...regionsColors} />
-      </div>
+
       <div className="allocations-bottom">
         <AllocatedByPartnerType />
+        <ClusterAllocations />
+
         <Achievements />
         <div className="allocations-history">
           <UkraineMapHistory />
