@@ -1,13 +1,13 @@
 @import "../../../scss/variables.scss";
 
 .targetedBeneficiaries-table {
-  width: 150px;
+  width: 100px;
 }
 
 .targetedBeneficiaries-table__item {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
   &:not(:last-child) {
     border-bottom: 1px dashed $grey-600;
   }
@@ -22,7 +22,7 @@
     margin: 0;
     &:nth-child(1) {
       font-size: 22px;
-      font-weight: 400;
+      font-weight: 500;
     }
     &:nth-child(2) {
       font-size: 16px;

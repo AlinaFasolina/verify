@@ -3,11 +3,13 @@
 .achievements-title {
   text-transform: uppercase;
   color: $blue-200;
-  font-size: 20px;
+  font-size: 17px;
   margin: 0 0 1rem;
   font-weight: 600;
 }
 
 .achievements-wrapper {
-  width: calc(35% - 5rem);
+  width: 480px;
+  margin-top: -150px;
+  margin-right: 93px;
 }

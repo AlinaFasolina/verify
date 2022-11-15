@@ -1,12 +1,14 @@
 @import "../../scss/variables.scss";
 
 .allocationsByCluster {
-  margin-right: 2rem;
+  margin-top: -200px;
+  width: 300px;
+  margin-right: 50px;
 }
 
 .allocationsByCluster-title {
   text-transform: uppercase;
   color: $blue-200;
-  font-size: 24px;
+  font-size: 28px;
   margin: 0 0 2rem;
 }

@@ -3,13 +3,14 @@
 .targetedBeneficiaries {
   display: flex;
   flex-direction: column;
+  margin-right: 2rem;
 }
 
 .targetedBeneficiaries-content {
   background: $blue-100;
   padding: 1rem 1.5rem;
   display: flex;
-  width: 500px;
+  width: 352px;
 }
 
 .targetedBeneficiaries-title {

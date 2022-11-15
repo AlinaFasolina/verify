@@ -1,15 +1,23 @@
 @import "../../scss/variables.scss";
 
+.allocatedByLocation {
+  margin-top: 115px;
+}
+
+.allocatedByLocation-content {
+  padding-right: 3rem;
+}
+
 .allocatedByLocation-allocated {
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
   border-bottom: 1px dashed $grey-600;
 }
 
 .allocatedByLocation-title {
   text-transform: uppercase;
   color: $blue-200;
-  font-size: 24px;
-  margin: 0 0 1rem;
+  font-size: 26px;
+  margin: 0 0 2rem;
   font-weight: 600;
 }

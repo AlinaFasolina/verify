@@ -16,7 +16,7 @@ const UkraineMapItem = ({ region, amount, circleSize, theme, x, y }) => {
             : "map-item__top_lg"
         }`}
       >
-        <div className="map-item__circle"></div>
+        {circleSize && amount && <div className="map-item__circle"></div>}
         <p className="map-item__amount">{amount}</p>
       </div>
       <p className="map-item__region-name">{region}</p>

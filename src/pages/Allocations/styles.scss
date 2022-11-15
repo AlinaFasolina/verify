@@ -1,21 +1,23 @@
 .allocations-top {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .allocations-bottom {
   display: flex;
-  justify-content: space-between;
 }
 
 .allocations-map {
   display: flex;
   justify-content: center;
-  margin-bottom: 4rem;
-  margin-top: -2rem;
+  position: relative;
+  top: -64px;
+  svg {
+    width: 800px;
+  }
 }
 
 .allocations-history {
-  margin-top: -15rem;
-  width: calc(30% - 5rem);
+  margin-top: -17rem;
+  width: 340px;
 }
