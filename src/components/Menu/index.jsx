@@ -9,7 +9,6 @@ const Menu = () => {
       <NavLink>work</NavLink>
       <NavLink>news</NavLink>
       <NavLink>about</NavLink>
-      <NavLink>get involved</NavLink>
     </div>
   );
 };

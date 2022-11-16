@@ -4,6 +4,27 @@
   margin-top: -200px;
   width: 300px;
   margin-right: 50px;
+  height: 470px;
+  overflow: auto;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f3f3f5;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #e4e4e4;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #d1d1d1;
+  }
 }
 
 .allocationsByCluster-title {
