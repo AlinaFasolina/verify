@@ -138,3 +138,52 @@
   margin-right: 0.5rem;
   margin-top: 2px;
 }
+
+.donorContrib-donorCountries {
+  height: 1066px;
+  overflow: auto;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f3f3f5;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #e4e4e4;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #d1d1d1;
+  }
+}
+
+.donorContrib-timeline {
+  height: 1082px;
+  overflow: auto;
+  padding-right: 1.5rem;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f3f3f5;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #e4e4e4;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #d1d1d1;
+  }
+}

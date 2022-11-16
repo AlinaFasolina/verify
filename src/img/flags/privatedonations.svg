@@ -1,0 +1,55 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:v="http://vecta.io"
+  width="1925"
+  height="1075"
+  viewBox="0 0 1925 1075"
+><style
+  ><svg{stroke:#000;stroke-linecap:round;stroke-linejoin:round;fill:#fff;fill-rule:evenodd;font-family:Roboto;font-size:14px;text-anchor:middle}svg text{paint-order:stroke;white-space:pre}svg .Text\.cls{stroke:none}></style><defs
+  ><style /></defs><rect
+    x="0"
+    y="0"
+    width="1930"
+    height="400"
+    stroke="none"
+    stroke-opacity="0"
+    fill="#fdcd09"
+    transform="translate(-0.5 -0.5)"
+  /><rect
+    x="0"
+    y="0"
+    width="1930"
+    height="400"
+    fill="#fdcd09"
+    stroke="none"
+    stroke-opacity="0"
+    transform="translate(-0.5 699.5)"
+  /><rect
+    x="0"
+    y="0"
+    width="1930"
+    height="300"
+    stroke="none"
+    stroke-opacity="0"
+    transform="translate(-0.5 399.5)"
+  /><g transform="translate(79.5 429.5)"><rect
+      x="0"
+      y="0"
+      width="1800"
+      height="260"
+      fill="none"
+      fill-opacity="0"
+      stroke="none"
+      stroke-opacity="0"
+    /><g class="Text.cls"><rect
+        x="0"
+        y="0"
+        width="1800"
+        height="260"
+        fill="none"
+        stroke="none"
+      /><text fill="#000000" fill-opacity="0.3" font-size="1300px"><tspan
+          x="900"
+          y="559"
+        >PD</tspan></text></g></g></svg>

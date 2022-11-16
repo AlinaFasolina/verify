@@ -14,7 +14,9 @@ const DonorContributions = () => {
     <Layout>
       <div className="donorContrib">
         <div className="donorContrib-left donorContrib-block">
-          <DonorCountries />
+          <div className="donorContrib-donorCountries">
+            <DonorCountries />
+          </div>
         </div>
 
         <div className="donorContrib-center donorContrib-block">
@@ -43,11 +45,13 @@ const DonorContributions = () => {
         </div>
 
         <div className="donorContrib-right donorContrib-block">
-          <h2 className="donorContrib-title">TIMELINE</h2>
-          <Timeline />
-          <p className="donorContrib-timeline__allocations">
-            Allocations in US$
-          </p>
+          <div className="donorContrib-timeline">
+            <h2 className="donorContrib-title">TIMELINE</h2>
+            <Timeline />
+            <p className="donorContrib-timeline__allocations">
+              Allocations in US$
+            </p>
+          </div>
         </div>
       </div>
     </Layout>

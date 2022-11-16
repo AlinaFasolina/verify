@@ -19,8 +19,24 @@ header {
 
 .header-right {
   display: flex;
+  align-items: center;
 }
 
 .header-logo {
   width: 140px;
+}
+
+.header-search__icon {
+  width: 30px;
+  cursor: pointer;
+}
+
+.header-search__input {
+  margin-right: 1rem;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
 }

@@ -12,4 +12,25 @@
   width: 480px;
   margin-top: -150px;
   margin-right: 93px;
+  height: 465px;
+  overflow: auto;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f3f3f5;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #e4e4e4;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #d1d1d1;
+  }
 }
