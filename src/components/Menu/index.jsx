@@ -8,7 +8,7 @@ const Menu = () => {
   return (
     <div className="menu">
       <NavLink to="/">Ukraine AID</NavLink>
-      <Dropdown title="Menu" items={headerWorkDropdownItemsList} />
+      <Dropdown title="work" items={headerWorkDropdownItemsList} />
       <NavLink>news</NavLink>
       <NavLink>about</NavLink>
     </div>
