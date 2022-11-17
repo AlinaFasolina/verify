@@ -1,0 +1,44 @@
+@import "../../scss/variables.scss";
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-links-wrapper {
+  position: absolute;
+  top: 39px;
+  left: 1px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  padding: 0.8rem;
+}
+
+.dropdown-title {
+  text-transform: uppercase;
+  color: #121212;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 1rem;
+  img {
+    margin-left: 0.3rem;
+  }
+  &.dropdown-title_active {
+    img {
+      transform: rotateX(180deg);
+    }
+  }
+}
+
+.dropdown-link {
+  text-decoration: none;
+  color: $black-main;
+  padding: 0.2rem;
+  font-size: 19px;
+  &:hover {
+    opacity: 0.6;
+  }
+}
