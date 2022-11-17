@@ -383,3 +383,8 @@ export const mapItemsList = [
     y: 526,
   },
 ];
+
+export const headerWorkDropdownItemsList = [
+  { title: "Donor Contributions", link: "/donor-contributions" },
+  { title: "Fund Allocations", link: "/allocations" },
+];
