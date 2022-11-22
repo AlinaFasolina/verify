@@ -1,21 +1,23 @@
 import React from "react";
 import "./styles.scss";
 import TimelineItem from "./TimelineItem";
-import { timelineList } from "../../consts/consts";
 
-const Timeline = () => {
+const Timeline = ({ timelineList }) => {
   return (
     <div className="timeline">
-      {timelineList.map((item) => (
-        <TimelineItem
-          icon={item.icon}
-          key={item.id}
-          descrip={item.descrip}
-          month={item.month}
-          amount={item.amount}
-          classname={item.classname}
-        />
-      ))}
+      {timelineList
+        .slice(0)
+        .reverse()
+        .map((item) => (
+          <TimelineItem
+            icon={item.icon}
+            key={item.id}
+            descrip={item.acf["timeline-details"]}
+            month={item.acf.month}
+            amount={item.acf["allocation-value"]}
+            classname={item.classname}
+          />
+        ))}
       <div className="timeline-vertical">
         <p className="timeline-vertical__year">2022</p>
         <p className="timeline-vertical__allocation">Allocation</p>

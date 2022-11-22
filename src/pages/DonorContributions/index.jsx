@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../../components/Layout";
 import "./styles.scss";
 import DisabilitiesDonutChart from "../../components/charts/donutCharts/DisabilitiesDonutChart";
@@ -8,8 +8,17 @@ import refugees from "../../img/slider-images/refugees.png";
 import EducationDonutChart from "../../components/charts/donutCharts/EducationDonutChart";
 import Timeline from "../../components/Timeline";
 import DonorCountries from "../../components/DonorCountries";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchTimelineData } from "../../store/timelineSlice";
 
 const DonorContributions = () => {
+  const timeline = useSelector((state) => state.timeline);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchTimelineData());
+  }, []);
+
   return (
     <Layout>
       <div className="donorContrib">
@@ -47,7 +56,9 @@ const DonorContributions = () => {
         <div className="donorContrib-right donorContrib-block">
           <div className="donorContrib-timeline">
             <h2 className="donorContrib-title">TIMELINE</h2>
-            <Timeline />
+            {timeline.timelineList.length && (
+              <Timeline timelineList={timeline.timelineList} />
+            )}
             <p className="donorContrib-timeline__allocations">
               Allocations in US$
             </p>
