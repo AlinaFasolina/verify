@@ -2,12 +2,12 @@ import { PieChart, Pie, Cell } from "recharts";
 import "./styles.scss";
 import "../styles.scss";
 
-const TargetedBeneficiariesChart = () => {
+const TargetedBeneficiariesChart = ({ percentsList, total }) => {
   const data = [
-    { subtitle: "Girls", value: 11 },
-    { subtitle: "Boys", value: 9 },
-    { subtitle: "Women", value: 47 },
-    { subtitle: "Men", value: 33 },
+    { subtitle: "Girls", value: percentsList[0] },
+    { subtitle: "Boys", value: percentsList[1] },
+    { subtitle: "Women", value: percentsList[2] },
+    { subtitle: "Men", value: percentsList[3] },
   ];
   const colors = ["#c8d6f0", "#c7c8ca", "#4f91cd", "#4d4e50"];
 
@@ -31,20 +31,20 @@ const TargetedBeneficiariesChart = () => {
       </PieChart>
       <div>
         <div className="targetedBeneficiaries-chart__total-number donut-label">
-          <p className="donut-total__top">4.9M</p>
+          <p className="donut-total__top">{total}</p>
           <p className="donut-total__bottom ">people targeted</p>
         </div>
         <div className="targetedBeneficiaries__girls-label">
-          <p className="donut-percent-label__white">11%</p>
+          <p className="donut-percent-label__white">{percentsList[0]}%</p>
         </div>
         <div className="targetedBeneficiaries__boys-label">
-          <p className="donut-percent-label__white">9%</p>
+          <p className="donut-percent-label__white">{percentsList[1]}%</p>
         </div>
         <div className="targetedBeneficiaries__women-label">
-          <p className="donut-percent-label__white">47%</p>
+          <p className="donut-percent-label__white">{percentsList[2]}%</p>
         </div>
         <div className="targetedBeneficiaries__men-label">
-          <p className="donut-percent-label__white">33%</p>
+          <p className="donut-percent-label__white">{percentsList[3]}%</p>
         </div>
       </div>
     </div>
