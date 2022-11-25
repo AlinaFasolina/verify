@@ -39,7 +39,7 @@ const Dropdown = ({ title, items }) => {
       {isMenuOpen && (
         <div className="dropdown-links-wrapper">
           {items.map((item) => (
-            <NavLink className="dropdown-link" to={item.link}>
+            <NavLink key={item.title} className="dropdown-link" to={item.link}>
               {item.title}
             </NavLink>
           ))}

@@ -37,6 +37,7 @@ const UkraineMap = ({
       <div className="mapInfo-wrapper">
         {mapItemsList.map((item) => (
           <UkraineMapItem
+            key={item.region}
             region={item.region}
             amount={item.amount}
             circleSize={item.circleSize}

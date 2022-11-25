@@ -12,7 +12,7 @@ const Timeline = ({ timelineList }) => {
           .map((item) => (
             <TimelineItem
               icon={item.acf["timeline-icon"]}
-              key={item.id}
+              key={item.acf["timeline-details"]}
               descrip={item.acf["timeline-details"]}
               month={item.acf.month}
               amount={item.acf["allocation-value"]}
