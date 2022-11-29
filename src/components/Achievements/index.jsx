@@ -1,20 +1,33 @@
 import React from "react";
 import "./styles.scss";
-import { expectedAchievementsList } from "../../consts/consts";
 import AchievementsItem from "./AchievementsItem";
+import { fetchAchievementsPerCluster } from "../../store/achievementsPerClusterSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
 
 const Achievements = () => {
+  const achievementsPerCluster = useSelector(
+    (state) => state.achievementsPerCluster
+  );
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchAchievementsPerCluster());
+  }, [dispatch]);
+
   return (
     <div className="achievements-wrapper">
       <p className="achievements-title">Expected achievements per clusters</p>
-      {expectedAchievementsList.map((item) => (
-        <AchievementsItem
-          key={item.id}
-          amount={item.amount}
-          img={item.img}
-          text={item.text}
-        />
-      ))}
+      {achievementsPerCluster?.achievementsList?.length &&
+        achievementsPerCluster.achievementsList.map((item) => (
+          <AchievementsItem
+            key={item.acf.details}
+            value={item.acf.value}
+            img={item.acf.icon}
+            text={item.acf.details}
+          />
+        ))}
     </div>
   );
 };
