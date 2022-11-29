@@ -1,32 +1,36 @@
 import React from "react";
 import "./styles.scss";
 import IconInfo from "../IconInfo";
-import location from "../../img/icons/location.svg";
-import peopleTarget from "../../img/icons/people-target.svg";
+import { fetchAllocatedByLocation } from "../../store/allocatedByLocationSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
 
 const AllocatedByLocation = () => {
+  const allocatedByLocation = useSelector((state) => state.allocatedByLocation);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchAllocatedByLocation());
+  }, [dispatch]);
+
   return (
     <div className="allocatedByLocation">
       <h2 className="allocatedByLocation-title">Allocated by location</h2>
       <div className="allocatedByLocation-content">
-        <div className="allocatedByLocation-allocated">
-          <IconInfo
-            hasDollarIcon
-            title="Allocated"
-            icon={location}
-            amount="91M"
-            size="lg"
-          />
-        </div>
-
-        <div>
-          <IconInfo
-            title="People targeted"
-            icon={peopleTarget}
-            amount="4.9M"
-            size="lg"
-          />
-        </div>
+        {allocatedByLocation?.allocatedByLocationList?.length &&
+          allocatedByLocation.allocatedByLocationList.map((item) => (
+            <IconInfo
+              key={item.acf.name}
+              hasDollarSign={
+                item.acf["has-dollar-sign"] === "Yes" ? true : false
+              }
+              name={item.acf.name}
+              icon={item.acf.icon}
+              value={item.acf.value}
+              size="lg"
+            />
+          ))}
       </div>
     </div>
   );

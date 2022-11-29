@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.scss";
 
-const IconInfo = ({ title, icon, amount, size, hasDollarIcon }) => {
+const IconInfo = ({ name, icon, value, size, hasDollarSign }) => {
   return (
     <div
       className={`icons-info ${
@@ -14,11 +14,11 @@ const IconInfo = ({ title, icon, amount, size, hasDollarIcon }) => {
       <div>
         <p className="icons-info__amount">
           <span className="icons-info__dollar-icon">
-            {hasDollarIcon ? "$" : ""}
+            {hasDollarSign ? "$" : ""}
           </span>
-          {amount}
+          {value}M
         </p>
-        <p className="icons-info__title">{title}</p>
+        <p className="icons-info__title">{name}</p>
       </div>
     </div>
   );
