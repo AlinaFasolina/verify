@@ -11,7 +11,7 @@ const AllocatedByPartnerType = () => {
         Allocated by partner type
       </h2>
 
-      <IconInfo title="Partners" icon={partnership} amount="38" size="sm" />
+      <IconInfo title="Partners" icon={partnership} value="38" size="sm" />
       <div className="allocationsByPartnerType-donut">
         <AllocationsByPartnerTypeChart />
       </div>
