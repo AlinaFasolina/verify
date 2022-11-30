@@ -10,7 +10,7 @@ export const fetchTargetedBeneficiariesData = createAsyncThunk(
   "targetedBeneficiaries/fetchTargetedBeneficiariesData",
   () => {
     return axios
-      .get("https://ukrrebuild.com/wp-json/wp/v2/target-beneficiaries")
+      .get("https://admin.ukrrebuild.com/wp-json/wp/v2/target-beneficiaries")
       .then((response) => response.data);
   }
 );
@@ -19,7 +19,7 @@ export const fetchTargetedBeneficiariesTotalData = createAsyncThunk(
   "targetedBeneficiaries/fetchTargetedBeneficiariesTotalData",
   () => {
     return axios
-      .get("https://ukrrebuild.com/wp-json/wp/v2/target-benef-total")
+      .get("https://admin.ukrrebuild.com/wp-json/wp/v2/target-benef-total")
       .then((response) => response.data);
   }
 );

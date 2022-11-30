@@ -10,7 +10,7 @@ export const fetchAchievementsPerCluster = createAsyncThunk(
   () => {
     return axios
       .get(
-        "https://ukrrebuild.com/wp-json/wp/v2/achiev_per_cluster?_fields=acf&acf_format=standard"
+        "https://admin.ukrrebuild.com/wp-json/wp/v2/achiev_per_cluster?_fields=acf&acf_format=standard"
       )
       .then((response) => response.data);
   }

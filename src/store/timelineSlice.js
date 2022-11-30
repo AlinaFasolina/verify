@@ -12,7 +12,7 @@ export const fetchTimelineData = createAsyncThunk(
   () => {
     return axios
       .get(
-        "https://ukrrebuild.com/wp-json/wp/v2/timeline?_fields=acf&acf_format=standard"
+        "https://admin.ukrrebuild.com/wp-json/wp/v2/timeline?_fields=acf&acf_format=standard"
       )
       .then((response) => response.data);
   }
