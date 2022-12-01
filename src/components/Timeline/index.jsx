@@ -5,20 +5,16 @@ import TimelineItem from "./TimelineItem";
 const Timeline = ({ timelineList }) => {
   return (
     <div className="timeline">
-      {timelineList &&
-        timelineList
-          .slice(0)
-          .reverse()
-          .map((item) => (
-            <TimelineItem
-              icon={item.acf["timeline-icon"]}
-              key={item.acf["timeline-details"]}
-              descrip={item.acf["timeline-details"]}
-              month={item.acf.month}
-              amount={item.acf["allocation-value"]}
-              classname={item.classname}
-            />
-          ))}
+      {timelineList.slice(0).map((item) => (
+        <TimelineItem
+          icon={item["timeline-icon"]}
+          key={item["timeline-details"]}
+          descrip={item["timeline-details"]}
+          month={item.month}
+          amount={item["allocation-value"]}
+          classname={item.classname}
+        />
+      ))}
       <div className="timeline-vertical">
         <p className="timeline-vertical__year">2022</p>
         <p className="timeline-vertical__allocation">Allocation</p>

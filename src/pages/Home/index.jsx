@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { formatDistance } from "date-fns";
 import Layout from "../../components/Layout";
 import News from "../../components/News";
 import SliderComponent from "../../components/SliderComponent";
@@ -9,8 +10,44 @@ import pill from "../../img/icons/pill.svg";
 import cube from "../../img/icons/cube.svg";
 import weight from "../../img/icons/weight.svg";
 import medicalCross from "../../img/icons/medical-cross.svg";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchSupportClusters } from "../../store/supportClustersSlice";
 
 const Home = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchSupportClusters());
+  }, [dispatch]);
+
+  const supportClusters = useSelector((state) => state.supportClusters);
+
+  const records = supportClusters?.supportClusters?.acf?.data || [];
+
+  const dateModified = supportClusters?.supportClusters?.modified;
+
+  const getIcon = (icon) => {
+    if (icon === "dollarCoin") {
+      return dollarCoin;
+    } else if (icon === "weight") {
+      return weight;
+    } else if (icon === "pill") {
+      return pill;
+    } else if (icon === "cube") {
+      return cube;
+    } else if (icon === "medicalCross") {
+      return medicalCross;
+    }
+  };
+
+  const lastUpdated = () => {
+    const date = formatDistance(new Date(dateModified), new Date(), {
+      addSuffix: true,
+    });
+
+    return date;
+  };
+
   return (
     <>
       <Layout>
@@ -48,51 +85,69 @@ const Home = () => {
                 Unaudited totals since Jan. 1, 2022
               </p>
               <p className="homepage-aid-updated">
-                <span> updated 5 am today</span>
+                <span> updated {dateModified && lastUpdated()}</span>
               </p>
               <div className="homepage-aid-stats">
                 <div className="homepage-aid-stats__left">
-                  <div className="homepage-aid-item">
-                    <p className="homepage-aid-amount">$1,463,822,168</p>
-                    <p className="homepage-aid-label">
-                      <span> in medical aid</span>
-                      <img className="homepage-aid__icon" src={dollarCoin} />
-                    </p>
-                  </div>
-                  <div className="homepage-aid-item">
-                    <p className="homepage-aid-amount">10,370,307</p>
-                    <p className="homepage-aid-label">
-                      <span> pounds of medicine and supplies</span>
-                      <img className="homepage-aid__icon" src={weight} />
-                    </p>
-                  </div>
+                  {records.length > 0 &&
+                    records
+                      .filter((item) => item.align === "left")
+                      .map((item) => {
+                        return (
+                          <div className="homepage-aid-item" key={item.title}>
+                            <p className="homepage-aid-amount">{item.value}</p>
+                            <p className="homepage-aid-label">
+                              <span>{item.title}</span>
+                              <img
+                                className="homepage-aid__icon"
+                                src={getIcon(item.icon)}
+                                alt=""
+                              />
+                            </p>
+                          </div>
+                        );
+                      })}
                 </div>
                 <div className="homepage-aid-stats__right">
-                  <div className="homepage-aid-item">
-                    <p className="homepage-aid-amount">479,492,254</p>
-                    <p className="homepage-aid-label">
-                      <span>doses of medicine</span>
-                      <img className="homepage-aid__icon" src={pill} />
-                    </p>
-                  </div>
+                  {records.length > 0 &&
+                    records
+                      .filter((item) => item.align === "right" && !item.inner)
+                      .map((item) => {
+                        return (
+                          <div className="homepage-aid-item" key={item.title}>
+                            <p className="homepage-aid-amount">{item.value}</p>
+                            <p className="homepage-aid-label">
+                              <span>{item.title}</span>
+                              <img
+                                className="homepage-aid__icon"
+                                src={getIcon(item.icon)}
+                                alt=""
+                              />
+                            </p>
+                          </div>
+                        );
+                      })}
                   <div className="homepage-aid-inner homepage-aid-item">
-                    <div>
-                      <p className="homepage-aid-amount">16,260</p>
-                      <p className="homepage-aid-label">
-                        <span>deliveries</span>
-                        <img className="homepage-aid__icon" src={cube} />
-                      </p>
-                    </div>
-                    <div>
-                      <p className="homepage-aid-amount">2,160</p>
-                      <p className="homepage-aid-label">
-                        <span> healthcare providers supported</span>
-                        <img
-                          className="homepage-aid__icon homepage-aid__icon-cross"
-                          src={medicalCross}
-                        />
-                      </p>
-                    </div>
+                    {records.length > 0 &&
+                      records
+                        .filter((item) => item.align === "right" && item.inner)
+                        .map((item) => {
+                          return (
+                            <div key={item.title}>
+                              <p className="homepage-aid-amount">
+                                {item.value}
+                              </p>
+                              <p className="homepage-aid-label">
+                                <span>{item.title}</span>
+                                <img
+                                  className="homepage-aid__icon"
+                                  src={getIcon(item.icon)}
+                                  alt=""
+                                />
+                              </p>
+                            </div>
+                          );
+                        })}
                   </div>
                 </div>
               </div>

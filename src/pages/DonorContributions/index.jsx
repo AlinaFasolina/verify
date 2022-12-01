@@ -13,6 +13,9 @@ import { fetchTimelineData } from "../../store/timelineSlice";
 
 const DonorContributions = () => {
   const timeline = useSelector((state) => state.timeline);
+
+  const records = timeline?.timelineList?.acf?.data || [];
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -56,9 +59,7 @@ const DonorContributions = () => {
         <div className="donorContrib-right donorContrib-block">
           <div className="donorContrib-timeline">
             <h2 className="donorContrib-title">TIMELINE</h2>
-            {timeline.timelineList.length && (
-              <Timeline timelineList={timeline.timelineList} />
-            )}
+            {records.length > 0 && <Timeline timelineList={records} />}
             <p className="donorContrib-timeline__allocations">
               Allocations in US$
             </p>
