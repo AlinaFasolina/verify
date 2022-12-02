@@ -3,12 +3,12 @@ import Men from "../../../img/icons/Men";
 import Women from "../../../img/icons/Women";
 import "./styles.scss";
 
-const TargetedBeneficiariesTable = ({ valuesList }) => {
+const TargetedBeneficiariesTable = ({ men, women, boys, girls }) => {
   return (
     <div className="targetedBeneficiaries-table">
       <div className="targetedBeneficiaries-table__item">
         <div className="targetedBeneficiaries-table__amount">
-          <p>{valuesList[0]}</p>
+          <p>{girls}K</p>
           <p>Girls</p>
         </div>
         <div className="targetedBeneficiaries-table__icon">
@@ -18,7 +18,7 @@ const TargetedBeneficiariesTable = ({ valuesList }) => {
 
       <div className="targetedBeneficiaries-table__item">
         <div className="targetedBeneficiaries-table__amount">
-          <p>{valuesList[1]}</p>
+          <p>{boys}K</p>
           <p>Boys</p>
         </div>
         <div className="targetedBeneficiaries-table__icon">
@@ -28,7 +28,7 @@ const TargetedBeneficiariesTable = ({ valuesList }) => {
 
       <div className="targetedBeneficiaries-table__item">
         <div className="targetedBeneficiaries-table__amount">
-          <p>{valuesList[2]}</p>
+          <p>{women}M</p>
           <p>Women</p>
         </div>
         <div className="targetedBeneficiaries-table__icon">
@@ -38,7 +38,7 @@ const TargetedBeneficiariesTable = ({ valuesList }) => {
 
       <div className="targetedBeneficiaries-table__item">
         <div className="targetedBeneficiaries-table__amount">
-          <p>{valuesList[3]}</p>
+          <p>{men}M</p>
           <p>Men</p>
         </div>
         <div className="targetedBeneficiaries-table__icon">

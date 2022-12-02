@@ -2,8 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const initialState = {
-  targetedBeneficiariesList: [],
-  targetedBeneficiariesTotal: null,
+  targetedBeneficiaries: [],
 };
 
 export const fetchTargetedBeneficiariesData = createAsyncThunk(
@@ -15,15 +14,6 @@ export const fetchTargetedBeneficiariesData = createAsyncThunk(
   }
 );
 
-export const fetchTargetedBeneficiariesTotalData = createAsyncThunk(
-  "targetedBeneficiaries/fetchTargetedBeneficiariesTotalData",
-  () => {
-    return axios
-      .get("https://admin.ukrrebuild.com/wp-json/wp/v2/target-benef-total")
-      .then((response) => response.data);
-  }
-);
-
 export const targetedBeneficiariesSlice = createSlice({
   name: "targetedBeneficiaries",
   initialState,
@@ -31,13 +21,7 @@ export const targetedBeneficiariesSlice = createSlice({
     builder.addCase(
       fetchTargetedBeneficiariesData.fulfilled,
       (state, action) => {
-        state.targetedBeneficiariesList = action.payload;
-      }
-    );
-    builder.addCase(
-      fetchTargetedBeneficiariesTotalData.fulfilled,
-      (state, action) => {
-        state.targetedBeneficiariesTotal = action.payload;
+        state.targetedBeneficiaries = action.payload;
       }
     );
   },

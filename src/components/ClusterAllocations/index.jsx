@@ -16,7 +16,6 @@ const ClusterAllocations = () => {
   );
 
   const records = allocationsByCluster?.supportClusters?.acf?.data || [];
-
   return (
     <div className="allocationsByCluster">
       <h2 className="allocationsByCluster-title" id="allocations-cluster">
@@ -26,7 +25,7 @@ const ClusterAllocations = () => {
         records.length > 0 &&
         records.map((item) => (
           <ProgressBar
-            key={item.id}
+            key={item.title}
             title={item.title}
             img={item.img}
             count={item.count}
