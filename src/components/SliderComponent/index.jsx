@@ -21,13 +21,13 @@ const SliderComponent = () => {
     <div>
       <Slider {...settings}>
         <div className="slider-item">
-          <img src={img1} />
+          <img alt="" src={img1} />
         </div>
         <div className="slider-item">
-          <img src={img2} />
+          <img alt="" src={img2} />
         </div>
         <div className="slider-item">
-          <img src={img3} />
+          <img alt="" src={img3} />
         </div>
       </Slider>
     </div>

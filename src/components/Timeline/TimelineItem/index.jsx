@@ -22,7 +22,7 @@ const TimelineItem = ({ descrip, month, amount, icon, classname }) => {
       <div className="timeline-info">
         <div className="timeline-icon__wrapper">
           <p className={`${classname} timeline-icon__circle`}>
-            <img src={icon} />
+            <img alt="" src={icon} />
           </p>
         </div>
         <div className="timeline-month__wrapper">

@@ -32,7 +32,7 @@ const DonorContributions = () => {
         </div>
 
         <div className="donorContrib-center donorContrib-block">
-          <img className="donorContrib-center__top-img" src={flag} />
+          <img alt="" className="donorContrib-center__top-img" src={flag} />
           <h3 className="donorContrib-subtitle">Priority areas</h3>
           <div className="donorContrib-sections-names">
             <p>Women and Girls</p>
@@ -53,7 +53,7 @@ const DonorContributions = () => {
               </div>
             </div>
           </div>
-          <img className="donorContrib-center__bottom-img" src={refugees} />
+          <img alt="" className="donorContrib-center__bottom-img" src={refugees} />
         </div>
 
         <div className="donorContrib-right donorContrib-block">

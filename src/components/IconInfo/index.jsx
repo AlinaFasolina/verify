@@ -9,7 +9,7 @@ const IconInfo = ({ name, icon, value, size, hasDollarSign }) => {
       }`}
     >
       <div className="icons-info__icon">
-        <img src={icon} />
+        <img alt="" src={icon} />
       </div>
       <div>
         <p className="icons-info__amount">

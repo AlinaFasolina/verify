@@ -14,7 +14,7 @@ const DonorCountries = ({ size }) => {
     >
       <h2 className="donorContrib-title">2022 DONOR CONTRIBUTIONS</h2>
       <div className="donorContrib-amount-wrapper">
-        <img className="donorContrib-money-icon" src={money} />
+        <img alt="" className="donorContrib-money-icon" src={money} />
         <div>
           <p>
             <span className="donorContrib-dollar">$</span>

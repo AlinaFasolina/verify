@@ -34,7 +34,7 @@ const Dropdown = ({ title, items }) => {
         }`}
         onClick={dropdownHandler}
       >
-        {title} <img src={caretDown} />
+        {title} <img alt="" src={caretDown} />
       </p>
       {isMenuOpen && (
         <div className="dropdown-links-wrapper">

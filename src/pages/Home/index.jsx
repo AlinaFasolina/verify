@@ -79,7 +79,7 @@ const Home = () => {
             </div>
             <div className="homepage-aid">
               <h2 className="homepage-aid-title">
-                <img src={aidLogo} /> <span>PRIORITY SUPPORT CLUSTERS</span>
+                <img alt="" src={aidLogo} /> <span>PRIORITY SUPPORT CLUSTERS</span>
               </h2>
               <p className="homepage-aid-totals">
                 Unaudited totals since Jan. 1, 2022

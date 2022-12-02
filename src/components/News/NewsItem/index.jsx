@@ -4,7 +4,7 @@ import "./styles.scss";
 const NewsItem = ({ text, img }) => {
   return (
     <div className="news-item">
-      <img className="news-item__img" src={img} />
+      <img alt="" className="news-item__img" src={img} />
       <p className="news-item__text">{text}</p>
     </div>
   );

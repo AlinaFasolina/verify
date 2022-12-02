@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <header>
       <div className="header-container">
-        <img className="header-logo" src={logo} />
+        <img alt="" className="header-logo" src={logo} />
         <div className="header-right">
           <Menu />
           <DonateBtn />
@@ -26,6 +26,7 @@ const Header = () => {
             />
           )}
           <img
+            alt=""
             className="header-search__icon"
             onClick={showSearch}
             src={search}
