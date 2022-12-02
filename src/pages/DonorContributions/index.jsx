@@ -10,17 +10,23 @@ import Timeline from "../../components/Timeline";
 import DonorCountries from "../../components/DonorCountries";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchTimelineData } from "../../store/timelineSlice";
+import { fetchPriorityAreasList } from "../../store/priorityAreasSlice";
 
 const DonorContributions = () => {
   const timeline = useSelector((state) => state.timeline);
 
-  const records = timeline?.timelineList?.acf?.data || [];
+  const timelineRecords = timeline?.timelineList?.acf?.data || [];
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchTimelineData());
+    dispatch(fetchPriorityAreasList());
   }, [dispatch]);
+
+  const priorityAreas = useSelector((state) => state.priorityAreas);
+
+  const priorityAreasRecords = priorityAreas?.priorityAreasList?.acf || [];
 
   return (
     <Layout>
@@ -45,13 +51,59 @@ const DonorContributions = () => {
           <div className="donorContrib-donuts">
             <div className="donorContrib-donuts__top">
               <div className="donut-women__and__girls">
-                <WomanDonutChart />
+                {priorityAreasRecords &&
+                  priorityAreasRecords["general-graph"] && (
+                    <WomanDonutChart
+                      girls={
+                        priorityAreasRecords["general-graph"][0].girls || null
+                      }
+                      women={
+                        priorityAreasRecords["general-graph"][0].women || null
+                      }
+                    />
+                  )}
               </div>
               <div className="donut-disabilities">
-                <DisabilitiesDonutChart />
+                {priorityAreasRecords &&
+                  priorityAreasRecords["disabilities-graph"] && (
+                    <DisabilitiesDonutChart
+                      girls={
+                        priorityAreasRecords["disabilities-graph"][0].girls ||
+                        null
+                      }
+                      women={
+                        priorityAreasRecords["disabilities-graph"][0].women ||
+                        null
+                      }
+                      boys={
+                        priorityAreasRecords["disabilities-graph"][0].boys ||
+                        null
+                      }
+                      men={
+                        priorityAreasRecords["disabilities-graph"][0].men ||
+                        null
+                      }
+                    />
+                  )}
               </div>
               <div className="donut-education">
-                <EducationDonutChart />
+                {priorityAreasRecords &&
+                  priorityAreasRecords["education-graph"] && (
+                    <EducationDonutChart
+                      girls={
+                        priorityAreasRecords["education-graph"][0].girls || null
+                      }
+                      women={
+                        priorityAreasRecords["education-graph"][0].women || null
+                      }
+                      boys={
+                        priorityAreasRecords["education-graph"][0].boys || null
+                      }
+                      men={
+                        priorityAreasRecords["education-graph"][0].men || null
+                      }
+                    />
+                  )}
               </div>
             </div>
           </div>
@@ -67,7 +119,9 @@ const DonorContributions = () => {
             <h2 className="donorContrib-title" id="timeline">
               TIMELINE
             </h2>
-            {records.length > 0 && <Timeline timelineList={records} />}
+            {timelineRecords.length > 0 && (
+              <Timeline timelineList={timelineRecords} />
+            )}
             <p className="donorContrib-timeline__allocations">
               Allocations in US$
             </p>

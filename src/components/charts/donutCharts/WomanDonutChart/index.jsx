@@ -2,7 +2,9 @@ import { PieChart, Pie, Cell } from "recharts";
 import "./styles.scss";
 import "../styles.scss";
 
-const WomanDonutChart = () => {
+const WomanDonutChart = ({ women, girls }) => {
+  const total = Math.round(Number(women) + Number(girls));
+
   const data = [
     { name: "23.2K", subtitle: "Girls", value: 30 },
     { name: "56.2K", subtitle: "Woman", value: 70 },
@@ -29,15 +31,15 @@ const WomanDonutChart = () => {
       </PieChart>
       <div>
         <div className="woman-chart__total-number donut-label">
-          <p className="donut-total__top">79K</p>
+          <p className="donut-total__top">{total}K</p>
           <p className="donut-total__bottom ">targeted</p>
         </div>
         <div className="woman-chart__girls-label donut-label">
-          <p className="donut-label__top">23.2K</p>
+          <p className="donut-label__top">{girls}K</p>
           <p className="donut-label__bottom">Girls</p>
         </div>
         <div className="woman-chart__women-label donut-label">
-          <p className="donut-label__top">56.2K</p>
+          <p className="donut-label__top">{women}K</p>
           <p className="donut-label__bottom">Women</p>
         </div>
       </div>
