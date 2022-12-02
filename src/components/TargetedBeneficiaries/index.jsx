@@ -44,7 +44,9 @@ const TargetedBeneficiaries = () => {
 
   return (
     <div className="targetedBeneficiaries">
-      <h2 className="targetedBeneficiaries-title">targeted beneficiaries</h2>
+      <h2 className="targetedBeneficiaries-title" id="targeted-beneficiaries">
+        targeted beneficiaries
+      </h2>
       <div className="targetedBeneficiaries-content">
         {valuesList && <TargetedBeneficiariesTable valuesList={valuesList} />}
         <div className="targetedBeneficiaries-donut">

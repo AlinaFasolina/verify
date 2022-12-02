@@ -91,6 +91,59 @@ export const donorsCountriesList = [
   { id: 27, title: "Philippines", img: philippines, count: 0.1 },
 ];
 
+export const hashLinks = [
+  {
+    id: 0,
+    name: "How your donations are helping",
+    path: "/#how-your-donations-are-helping",
+  },
+  {
+    id: 1,
+    name: "Priority support clusters",
+    path: "/#priority-support-clusters",
+  },
+  {
+    id: 2,
+    name: "Donor contributions",
+    path: "/donor-contributions#donor-contributions",
+  },
+  {
+    id: 3,
+    name: "Priority areas",
+    path: "/donor-contributions#priority-areas",
+  },
+  {
+    id: 4,
+    name: "Targeted beneficiaries",
+    path: "/allocations#targeted-beneficiaries",
+  },
+  {
+    id: 5,
+    name: "Allocated by location",
+    path: "/allocations#allocated-location",
+  },
+  {
+    id: 6,
+    name: "Allocated by partner type",
+    path: "/allocations#allocated-partner-type",
+  },
+  {
+    id: 7,
+    name: "Allocations by cluster",
+    path: "/allocations#allocations-cluster",
+  },
+  {
+    id: 8,
+    name: "Expected achievements per clusters",
+    path: "/allocations#expected-achievements-clusters",
+  },
+  {
+    id: 9,
+    name: "Timeline",
+    path: "/donor-contributions#timeline",
+  },
+];
+
 export const clusterAllocationsList = [
   { id: 1, title: "MPC", count: "25.0" },
   { id: 2, title: "Food Security", count: 17.1 },

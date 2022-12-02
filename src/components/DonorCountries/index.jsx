@@ -12,7 +12,9 @@ const DonorCountries = ({ size }) => {
         size === "sm" ? "donorContrib-counties_sm" : ""
       }`}
     >
-      <h2 className="donorContrib-title">2022 DONOR CONTRIBUTIONS</h2>
+      <h2 className="donorContrib-title" id="donor-contributions">
+        2022 DONOR CONTRIBUTIONS
+      </h2>
       <div className="donorContrib-amount-wrapper">
         <img alt="" className="donorContrib-money-icon" src={money} />
         <div>

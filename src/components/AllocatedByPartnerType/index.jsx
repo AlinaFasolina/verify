@@ -7,7 +7,7 @@ import AllocationsByPartnerTypeChart from "../charts/donutCharts/AllocationsPart
 const AllocatedByPartnerType = () => {
   return (
     <div className="allocatedByPartnerType">
-      <h2 className="allocatedByPartnerType-title">
+      <h2 className="allocatedByPartnerType-title" id="allocated-partner-type">
         Allocated by partner type
       </h2>
 

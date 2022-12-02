@@ -16,7 +16,9 @@ const AllocatedByLocation = () => {
 
   return (
     <div className="allocatedByLocation">
-      <h2 className="allocatedByLocation-title">Allocated by location</h2>
+      <h2 className="allocatedByLocation-title" id="allocated-location">
+        Allocated by location
+      </h2>
       <div className="allocatedByLocation-content">
         {allocatedByLocation?.allocatedByLocationList?.length > 0 &&
           allocatedByLocation.allocatedByLocationList.map((item) => (

@@ -33,7 +33,9 @@ const DonorContributions = () => {
 
         <div className="donorContrib-center donorContrib-block">
           <img alt="" className="donorContrib-center__top-img" src={flag} />
-          <h3 className="donorContrib-subtitle">Priority areas</h3>
+          <h3 className="donorContrib-subtitle" id="priority-areas">
+            Priority areas
+          </h3>
           <div className="donorContrib-sections-names">
             <p>Women and Girls</p>
             <p>People with Disabilities</p>
@@ -53,12 +55,18 @@ const DonorContributions = () => {
               </div>
             </div>
           </div>
-          <img alt="" className="donorContrib-center__bottom-img" src={refugees} />
+          <img
+            alt=""
+            className="donorContrib-center__bottom-img"
+            src={refugees}
+          />
         </div>
 
         <div className="donorContrib-right donorContrib-block">
           <div className="donorContrib-timeline">
-            <h2 className="donorContrib-title">TIMELINE</h2>
+            <h2 className="donorContrib-title" id="timeline">
+              TIMELINE
+            </h2>
             {records.length > 0 && <Timeline timelineList={records} />}
             <p className="donorContrib-timeline__allocations">
               Allocations in US$

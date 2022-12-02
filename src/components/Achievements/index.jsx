@@ -18,7 +18,9 @@ const Achievements = () => {
 
   return (
     <div className="achievements-wrapper">
-      <p className="achievements-title">Expected achievements per clusters</p>
+      <p className="achievements-title" id="expected-achievements-clusters">
+        Expected achievements per clusters
+      </p>
       {achievementsPerCluster?.achievementsList?.length > 0 &&
         achievementsPerCluster.achievementsList.map((item) => (
           <AchievementsItem

@@ -8,16 +8,16 @@ import "./styles.scss";
 const Socials = () => {
   return (
     <div className="socials-wrapper">
-      <a className="socials-link" href="#">
+      <a className="socials-link" href="/#">
         <Facebook />
       </a>
-      <a className="socials-link" href="#">
+      <a className="socials-link" href="/#">
         <Twitter />
       </a>
-      <a className="socials-link" href="#">
+      <a className="socials-link" href="/#">
         <Instagram />
       </a>
-      <a className="socials-link" href="#">
+      <a className="socials-link" href="/#">
         <Youtube />
       </a>
     </div>

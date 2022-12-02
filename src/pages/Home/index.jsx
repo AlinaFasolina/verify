@@ -54,7 +54,10 @@ const Home = () => {
         <div className="homepage-wrapper">
           <div className="homepage-left">
             <div className="homepage-donations">
-              <h1 className="homepage-main-title">
+              <h1
+                className="homepage-main-title"
+                id="how-your-donations-are-helping"
+              >
                 How your donations are helping
               </h1>
               <p className="homepage-descrip">
@@ -78,8 +81,9 @@ const Home = () => {
               </ul>
             </div>
             <div className="homepage-aid">
-              <h2 className="homepage-aid-title">
-                <img alt="" src={aidLogo} /> <span>PRIORITY SUPPORT CLUSTERS</span>
+              <h2 className="homepage-aid-title" id="priority-support-clusters">
+                <img alt="" src={aidLogo} />
+                <span>PRIORITY SUPPORT CLUSTERS</span>
               </h2>
               <p className="homepage-aid-totals">
                 Unaudited totals since Jan. 1, 2022

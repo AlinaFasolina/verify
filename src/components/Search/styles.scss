@@ -1,0 +1,24 @@
+.header-search__icon {
+  width: 30px;
+  cursor: pointer;
+}
+
+.header-search__input {
+  margin-right: 1rem;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.header-search__wrapper {
+  width: 300px;
+  margin-right: 1rem;
+}
+
+.search__item {
+  padding: 7px 0;
+  cursor: pointer;
+}

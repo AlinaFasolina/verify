@@ -6,6 +6,7 @@ import { achievementsPerClusterSlice } from "./achievementsPerClusterSlice";
 import { allocatedByLocationSlice } from "./allocatedByLocationSlice";
 import { supportClustersSlice } from "./supportClustersSlice";
 import { allocatedByPartnerTypeSlice } from "./allocatedByPartnerTypeSlice";
+import { allocationsByClusterSlice } from "./allocationsByClusterSlice";
 
 export const store = configureStore({
   reducer: {
@@ -15,6 +16,7 @@ export const store = configureStore({
     allocatedByLocation: allocatedByLocationSlice.reducer,
     supportClusters: supportClustersSlice.reducer,
     allocatedByPartnerType: allocatedByPartnerTypeSlice.reducer,
+    allocationsByCluster: allocationsByClusterSlice.reducer,
   },
 });
 
