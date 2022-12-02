@@ -4,10 +4,10 @@ import "../styles.scss";
 
 const TargetedBeneficiariesChart = ({ percentsList, total }) => {
   const data = [
-    { subtitle: "Girls", value: percentsList[0] },
-    { subtitle: "Boys", value: percentsList[1] },
-    { subtitle: "Women", value: percentsList[2] },
-    { subtitle: "Men", value: percentsList[3] },
+    { subtitle: "Girls", value: Number(percentsList[0]) },
+    { subtitle: "Boys", value: Number(percentsList[1]) },
+    { subtitle: "Women", value: Number(percentsList[2]) },
+    { subtitle: "Men", value: Number(percentsList[3]) },
   ];
   const colors = ["#c8d6f0", "#c7c8ca", "#4f91cd", "#4d4e50"];
 

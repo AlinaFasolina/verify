@@ -34,11 +34,8 @@
 
 .allocationsPartnerType__un-percent {
   position: absolute;
-  left: 247px;
-  top: 163px;
-  p {
-    color: $grey-200;
-  }
+  left: 144px;
+  top: 152px;
 }
 
 .allocationsPartnerType__nngo-label {
@@ -49,8 +46,11 @@
 
 .allocationsPartnerType__nngo-percent {
   position: absolute;
-  left: 146px;
-  top: 151px;
+  left: 244px;
+  top: 161px;
+  p {
+    color: $grey-200;
+  }
 }
 
 .allocationsPartnerType__ingo-label {
@@ -61,6 +61,6 @@
 
 .allocationsPartnerType__ingo-percent {
   position: absolute;
-  left: 183px;
+  left: 188px;
   top: 277px;
 }

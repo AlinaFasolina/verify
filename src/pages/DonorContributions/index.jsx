@@ -20,7 +20,7 @@ const DonorContributions = () => {
 
   useEffect(() => {
     dispatch(fetchTimelineData());
-  }, []);
+  }, [dispatch]);
 
   return (
     <Layout>

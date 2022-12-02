@@ -18,7 +18,7 @@ const AllocatedByLocation = () => {
     <div className="allocatedByLocation">
       <h2 className="allocatedByLocation-title">Allocated by location</h2>
       <div className="allocatedByLocation-content">
-        {allocatedByLocation?.allocatedByLocationList?.length &&
+        {allocatedByLocation?.allocatedByLocationList?.length > 0 &&
           allocatedByLocation.allocatedByLocationList.map((item) => (
             <IconInfo
               key={item.acf.name}

@@ -48,7 +48,7 @@ const TargetedBeneficiaries = () => {
       <div className="targetedBeneficiaries-content">
         {valuesList && <TargetedBeneficiariesTable valuesList={valuesList} />}
         <div className="targetedBeneficiaries-donut">
-          {percentsList && (
+          {percentsList.length > 0 && (
             <TargetedBeneficiariesChart
               percentsList={percentsList}
               total={total}

@@ -19,7 +19,7 @@ const Achievements = () => {
   return (
     <div className="achievements-wrapper">
       <p className="achievements-title">Expected achievements per clusters</p>
-      {achievementsPerCluster?.achievementsList?.length &&
+      {achievementsPerCluster?.achievementsList?.length > 0 &&
         achievementsPerCluster.achievementsList.map((item) => (
           <AchievementsItem
             key={item.acf.details}
