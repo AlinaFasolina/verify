@@ -5,11 +5,6 @@ import News from "../../components/News";
 import SliderComponent from "../../components/SliderComponent";
 import "./styles.scss";
 import aidLogo from "../../img/aid-logo.png";
-import dollarCoin from "../../img/icons/dollar-coin.svg";
-import pill from "../../img/icons/pill.svg";
-import cube from "../../img/icons/cube.svg";
-import weight from "../../img/icons/weight.svg";
-import medicalCross from "../../img/icons/medical-cross.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSupportClusters } from "../../store/supportClustersSlice";
 
@@ -24,21 +19,9 @@ const Home = () => {
 
   const records = supportClusters?.supportClusters?.acf?.data || [];
 
-  const dateModified = supportClusters?.supportClusters?.modified;
+  const unauditedTotalsDate = supportClusters?.supportClusters?.acf?.date || [];
 
-  const getIcon = (icon) => {
-    if (icon === "dollarCoin") {
-      return dollarCoin;
-    } else if (icon === "weight") {
-      return weight;
-    } else if (icon === "pill") {
-      return pill;
-    } else if (icon === "cube") {
-      return cube;
-    } else if (icon === "medicalCross") {
-      return medicalCross;
-    }
-  };
+  const dateModified = supportClusters?.supportClusters?.modified;
 
   const lastUpdated = () => {
     const date = formatDistance(new Date(dateModified), new Date(), {
@@ -86,7 +69,7 @@ const Home = () => {
                 <span>PRIORITY SUPPORT CLUSTERS</span>
               </h2>
               <p className="homepage-aid-totals">
-                Unaudited totals since Jan. 1, 2022
+                Unaudited totals since {unauditedTotalsDate}
               </p>
               <p className="homepage-aid-updated">
                 <span> updated {dateModified && lastUpdated()}</span>
@@ -104,7 +87,7 @@ const Home = () => {
                               <span>{item.title}</span>
                               <img
                                 className="homepage-aid__icon"
-                                src={getIcon(item.icon)}
+                                src={item.icon}
                                 alt=""
                               />
                             </p>
@@ -124,7 +107,7 @@ const Home = () => {
                               <span>{item.title}</span>
                               <img
                                 className="homepage-aid__icon"
-                                src={getIcon(item.icon)}
+                                src={item.icon}
                                 alt=""
                               />
                             </p>
@@ -145,7 +128,7 @@ const Home = () => {
                                 <span>{item.title}</span>
                                 <img
                                   className="homepage-aid__icon"
-                                  src={getIcon(item.icon)}
+                                  src={item.icon}
                                   alt=""
                                 />
                               </p>

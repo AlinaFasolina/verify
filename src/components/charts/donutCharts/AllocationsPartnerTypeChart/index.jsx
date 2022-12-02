@@ -1,24 +1,8 @@
 import { PieChart, Pie, Cell } from "recharts";
 import "./styles.scss";
 import "../styles.scss";
-import { fetchAllocatedByPartnerType } from "../../../../store/allocatedByPartnerTypeSlice";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
 
-const AllocationsPartnerTypeChart = () => {
-  const allocatedByPartnerType = useSelector(
-    (state) => state.allocatedByPartnerType
-  );
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchAllocatedByPartnerType());
-  }, [dispatch]);
-
-  const records =
-    allocatedByPartnerType?.allocatedByPartnerTypeList?.acf?.data || [];
-
+const AllocationsPartnerTypeChart = ({ records }) => {
   const projectsTotal =
     records.length > 0 &&
     records

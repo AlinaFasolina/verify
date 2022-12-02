@@ -4,11 +4,14 @@ import Menu from "../Menu";
 import "./styles.scss";
 import logo from "../../img/icons/verify-logo.svg";
 import Search from "../Search";
+import { NavLink } from "react-router-dom";
 
 const Header = () => (
   <header>
     <div className="header-container">
-      <img alt="" className="header-logo" src={logo} />
+      <NavLink to="/">
+        <img alt="" className="header-logo" src={logo} />
+      </NavLink>
       <div className="header-right">
         <Menu />
         <DonateBtn />
