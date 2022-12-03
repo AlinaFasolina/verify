@@ -12,7 +12,7 @@ export const fetchAllocatedByLocation = createAsyncThunk(
       .get(
         "https://admin.ukrrebuild.com/wp-json/wp/v2/allocated_by_loc?_fields=acf&acf_format=standard"
       )
-      .then((response) => response.data);
+      .then((response) => response?.data[0]);
   }
 );
 

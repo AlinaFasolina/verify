@@ -10,6 +10,8 @@ const AllocatedByLocation = () => {
 
   const dispatch = useDispatch();
 
+  const records = allocatedByLocation?.allocatedByLocationList?.acf?.data || [];
+
   useEffect(() => {
     dispatch(fetchAllocatedByLocation());
   }, [dispatch]);
@@ -20,16 +22,15 @@ const AllocatedByLocation = () => {
         Allocated by location
       </h2>
       <div className="allocatedByLocation-content">
-        {allocatedByLocation?.allocatedByLocationList?.length > 0 &&
-          allocatedByLocation.allocatedByLocationList.map((item) => (
+        {records &&
+          records?.length > 0 &&
+          records.map((item) => (
             <IconInfo
-              key={item.acf.name}
-              hasDollarSign={
-                item.acf["has-dollar-sign"] === "Yes" ? true : false
-              }
-              name={item.acf.name}
-              icon={item.acf.icon}
-              value={item.acf.value}
+              key={item.name}
+              hasDollarSign={item["has-dollar-sign"] === "Yes" ? true : false}
+              name={item.name}
+              icon={item.icon}
+              value={item.value}
               size="lg"
             />
           ))}

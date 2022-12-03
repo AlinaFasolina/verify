@@ -16,18 +16,21 @@ const Achievements = () => {
     dispatch(fetchAchievementsPerCluster());
   }, [dispatch]);
 
+  const records = achievementsPerCluster?.achievementsList?.acf?.data || [];
+
   return (
     <div className="achievements-wrapper">
       <p className="achievements-title" id="expected-achievements-clusters">
         Expected achievements per clusters
       </p>
-      {achievementsPerCluster?.achievementsList?.length > 0 &&
-        achievementsPerCluster.achievementsList.map((item) => (
+      {records &&
+        records.length > 0 &&
+        records.map((item) => (
           <AchievementsItem
-            key={item.acf.details}
-            value={item.acf.value}
-            img={item.acf.icon}
-            text={item.acf.details}
+            key={item.details}
+            value={item.value}
+            img={item.icon}
+            text={item.details}
           />
         ))}
     </div>
