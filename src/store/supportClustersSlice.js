@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const initialState = {
-  supportClusters: [],
+  supportClustersList: [],
 };
 
 export const fetchSupportClusters = createAsyncThunk("supportClusters", () => {
@@ -16,7 +16,7 @@ export const supportClustersSlice = createSlice({
   initialState,
   extraReducers: (builder) => {
     builder.addCase(fetchSupportClusters.fulfilled, (state, action) => {
-      state.supportClusters = action.payload;
+      state.supportClustersList = action.payload;
     });
   },
 });

@@ -17,7 +17,7 @@ const Home = () => {
 
   const supportClusters = useSelector((state) => state.supportClusters);
 
-  const records = supportClusters?.supportClusters?.acf?.data || [];
+  const records = supportClusters?.supportClustersList?.acf?.data || [];
 
   const unauditedTotalsDate = supportClusters?.supportClusters?.acf?.date || [];
 
@@ -44,7 +44,7 @@ const Home = () => {
                 How your donations are helping
               </h1>
               <p className="homepage-descrip">
-                Eight months on, the situation in Ukraine remains dire.
+                Nine months on, the situation in Ukraine remains dire.
               </p>
               <p className="homepage-descrip">
                 But across the world, amazing people like you have united in

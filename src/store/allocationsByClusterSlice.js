@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const initialState = {
-  allocationsByCluster: [],
+  allocationsByClusterList: [],
 };
 
 export const fetchAllocationsByCluster = createAsyncThunk(
@@ -19,7 +19,7 @@ export const allocationsByClusterSlice = createSlice({
   initialState,
   extraReducers: (builder) => {
     builder.addCase(fetchAllocationsByCluster.fulfilled, (state, action) => {
-      state.supportClusters = action.payload;
+      state.allocationsByClusterList = action.payload;
     });
   },
 });

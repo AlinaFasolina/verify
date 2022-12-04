@@ -15,7 +15,8 @@ const ClusterAllocations = () => {
     (state) => state.allocationsByCluster
   );
 
-  const records = allocationsByCluster?.supportClusters?.acf?.data || [];
+  const records = allocationsByCluster?.allocationsByClusterList?.acf?.data || [];
+  
   return (
     <div className="allocationsByCluster">
       <h2 className="allocationsByCluster-title" id="allocations-cluster">
