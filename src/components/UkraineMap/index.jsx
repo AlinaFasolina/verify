@@ -1,7 +1,10 @@
 import React from "react";
 import UkraineMapItem from "./UkraineMapItem";
-import { mapItemsList } from "../../consts/consts";
 import "./styles.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchUkraineRegions } from "../../store/urkaineMapSlice";
+import { useEffect } from "react";
+import { getMapCircleSize } from "../../helpers";
 
 const UkraineMap = ({
   crimea,
@@ -32,20 +35,32 @@ const UkraineMap = ({
   zakarpattya,
   chernivtsi,
 }) => {
+  const urkaineMap = useSelector((state) => state.urkaineMap);
+
+  const regionsRecords = urkaineMap?.regionsList?.acf || null;
+
+  const regionsRecordsFormatted =
+    regionsRecords && Object.entries(regionsRecords);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchUkraineRegions());
+  }, [dispatch]);
+
   return (
     <div className="map">
       <div className="mapInfo-wrapper">
-        {mapItemsList.map((item) => (
-          <UkraineMapItem
-            key={item.region}
-            region={item.region}
-            amount={item.amount}
-            circleSize={item.circleSize}
-            theme={item.theme}
-            x={item.x}
-            y={item.y}
-          />
-        ))}
+        {regionsRecordsFormatted &&
+          regionsRecordsFormatted.length > 0 &&
+          regionsRecordsFormatted.map((item) => (
+            <UkraineMapItem
+              key={item[0]}
+              region={item[0]}
+              amount={item[1]}
+              circleSize={getMapCircleSize(item[1])}
+            />
+          ))}
       </div>
       <svg
         baseProfile="tiny"

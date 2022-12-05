@@ -1,12 +1,10 @@
 import React from "react";
 import "./styles.scss";
+import { getRegionName } from "../../../helpers";
 
-const UkraineMapItem = ({ region, amount, circleSize, theme, x, y }) => {
+const UkraineMapItem = ({ region, amount, circleSize }) => {
   return (
-    <div
-      style={{ left: x, top: y }}
-      className={`map-item ${theme === "dark" ? "map-item_dark" : ""}`}
-    >
+    <div className={`map-item map-item__${region}`}>
       <div
         className={`map-item__top ${
           circleSize === "sm"
@@ -17,9 +15,9 @@ const UkraineMapItem = ({ region, amount, circleSize, theme, x, y }) => {
         }`}
       >
         {circleSize && amount && <div className="map-item__circle"></div>}
-        <p className="map-item__amount">{amount}</p>
+        {amount && <p className="map-item__amount">{amount}M</p>}
       </div>
-      <p className="map-item__region-name">{region}</p>
+      <p className="map-item__region-name">{getRegionName(region)}</p>
     </div>
   );
 };
