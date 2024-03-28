@@ -9,6 +9,7 @@ import { allocatedByPartnerTypeSlice } from "./allocatedByPartnerTypeSlice";
 import { allocationsByClusterSlice } from "./allocationsByClusterSlice";
 import { priorityAreasSlice } from "./priorityAreasSlice";
 import { urkaineMapSlice } from "./urkaineMapSlice";
+import { stripeSlice } from "./stripeSlice";
 
 export const store = configureStore({
   reducer: {
@@ -21,6 +22,7 @@ export const store = configureStore({
     allocationsByCluster: allocationsByClusterSlice.reducer,
     priorityAreas: priorityAreasSlice.reducer,
     urkaineMap: urkaineMapSlice.reducer,
+    stripe: stripeSlice.reducer,
   },
 });
 

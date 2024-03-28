@@ -4,7 +4,6 @@ import "./styles.scss";
 import TargetedBeneficiariesTable from "./TargetedBeneficiariesTable";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchTargetedBeneficiariesData } from "../../store/targetedBeneficiariesSlice";
-import { useState } from "react";
 
 const TargetedBeneficiaries = () => {
   const targetedBeneficiaries = useSelector(
