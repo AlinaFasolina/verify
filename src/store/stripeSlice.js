@@ -7,7 +7,7 @@ const initialState = {
 
 const config = {
   headers: {
-    Authorization: 'Bearer sk_test_51M5RX8B10ruzUTHO7bYzsF3tgQ6iSuGRUXrY4lgPkstKFb7aLYt3nEai9VR5YARDKU0s8URORjNU7LXYlOLTxHUL00tfTMBDwt',
+    Authorization: 'Bearer add_key_here',
   },
 }
 
